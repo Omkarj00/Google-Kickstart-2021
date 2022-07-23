@@ -1,0 +1,17 @@
+//solution for GoogleKickstart 2021 Round A godness  string 
+
+def minOperation(s,k,N): 
+    c=0      
+    for i in range(0,int(N/2)):
+        if s[i]!= s[N-1-i]:
+            c=c+1
+       
+    return  abs(c-k)
+t = int(input()) # read a line with a single integer
+for i in range(1, t + 1):
+    N,K=[int(i) for i in input().split()]
+    s=input()
+    S=list(s.strip())
+    min_op=minOperation(S,K,N)
+    print(f"Case #{i}: {min_op}")# check out .format's specification for more formatting options
+      
